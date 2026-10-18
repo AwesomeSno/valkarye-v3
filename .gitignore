@@ -9,3 +9,6 @@ valkarye-reel/.remotion
 
 # macOS
 .DS_Store
+
+# Local journal drafts
+journal/
