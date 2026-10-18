@@ -1,0 +1,11 @@
+# Video & audio outputs
+Videos/
+
+# Remotion local caches & build
+.remotion/
+.cache/
+valkarye-reel/node_modules
+valkarye-reel/.remotion
+
+# macOS
+.DS_Store
