@@ -1,14 +1,24 @@
-# Video & audio outputs
-Videos/
+# Video & reel scripts
+video-scripts/
 
-# Remotion local caches & build
+# Video, audio, and media files
+Videos/
+*.mp4
+*.mov
+*.mp3
+*.wav
+
+# Local journal drafts and assets
+journal/
+
+# Remotion local caches & media
 .remotion/
 .cache/
+node_modules
 valkarye-reel/node_modules
-valkarye-reel/.remotion
+valkarye-reel/.remotion/
+valkarye-reel/public/images/
+valkarye-reel/public/*.mp3
 
 # macOS
 .DS_Store
-
-# Local journal drafts
-journal/
