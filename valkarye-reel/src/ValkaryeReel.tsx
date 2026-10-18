@@ -226,7 +226,7 @@ const RoboticArmSVG: React.FC<{ progress: number }> = ({ progress }) => {
           strokeWidth="3"
         />
 
-        {/* Shoulder Joint Pivot (at 350, 480) */}
+        {/* Shoulder Joint Pivot */}
         <circle cx="350" cy="480" r="24" fill="url(#jointGrad)" stroke="#fff" strokeWidth="3" />
 
         {/* Arm Assembly Hierarchical Group */}
@@ -327,50 +327,50 @@ const RoboticArmSVG: React.FC<{ progress: number }> = ({ progress }) => {
 
 // ─── Subtitles Component ───
 const SUBTITLE_CUES = [
-  { start: 0, end: 33, text: "Hey everyone!" },
+  { start: 0, end: 32, text: "Hey everyone!" },
   {
-    start: 33,
-    end: 234,
+    start: 32,
+    end: 265,
     text: "A few years back, I made a robotic arm just for fun, and today I'm finally bringing it back to life as Valkyrie V3.",
   },
   {
-    start: 234,
-    end: 555,
+    start: 265,
+    end: 660,
     text: "I kind of lost my old one, so I'm trying to remake it, make it even better so that it can actually move objects right now, respond to voice commands, and let you control every single axis of it with an app on your phone or desktop.",
   },
   {
-    start: 555,
-    end: 611,
+    start: 660,
+    end: 711,
     text: "Here's what I've done so far:",
   },
   {
-    start: 611,
-    end: 675,
+    start: 711,
+    end: 772,
     text: "• Laid out the core architecture",
   },
   {
-    start: 675,
-    end: 766,
+    start: 772,
+    end: 865,
     text: "• Planned the multi-axial servo configuration",
   },
   {
-    start: 766,
-    end: 920,
+    start: 865,
+    end: 1032,
     text: "• Designed the wireless control pipeline for both the companion app and voice recognition",
   },
   {
-    start: 920,
-    end: 1188,
+    start: 1032,
+    end: 1319,
     text: "What I'm going to do next is list out the materials which I need to build this entire thing, model the joints of the arm in CAD, and start testing the motor drivers and firmware.",
   },
   {
-    start: 1188,
-    end: 1233,
+    start: 1319,
+    end: 1355,
     text: "Thank you for listening.",
   },
   {
-    start: 1233,
-    end: 1300,
+    start: 1355,
+    end: 1410,
     text: "See you in the next one!",
   },
 ];
@@ -1157,39 +1157,39 @@ export const ValkaryeReel: React.FC = () => {
       {/* Global Header */}
       <TopBadge />
 
-      {/* Scene 1 & 2: Intro (0 - 234 frames = 0 - 7.8s) */}
-      <Sequence from={0} durationInFrames={234} name="Intro">
+      {/* Scene 1 & 2: Intro (0 - 265 frames = 0 - 8.8s) */}
+      <Sequence from={0} durationInFrames={265} name="Intro">
         <IntroScene />
       </Sequence>
 
-      {/* Scene 3: Core Features (234 - 555 frames = 7.8s - 18.5s) */}
-      <Sequence from={234} durationInFrames={321} name="Capabilities">
+      {/* Scene 3: Core Features (265 - 660 frames = 8.8s - 22.0s) */}
+      <Sequence from={265} durationInFrames={395} name="Capabilities">
         <CapabilitiesScene />
       </Sequence>
 
-      {/* Scene 4: What I've Done So Far (555 - 920 frames = 18.5s - 30.7s) */}
-      <Sequence from={555} durationInFrames={365} name="WhatIDid">
+      {/* Scene 4: What I've Done So Far (660 - 1032 frames = 22.0s - 34.4s) */}
+      <Sequence from={660} durationInFrames={372} name="WhatIDid">
         <WhatIDidScene />
       </Sequence>
 
-      {/* Scene 5: What's Next (920 - 1188 frames = 30.7s - 39.6s) */}
-      <Sequence from={920} durationInFrames={268} name="WhatNext">
+      {/* Scene 5: What's Next (1032 - 1319 frames = 34.4s - 44.0s) */}
+      <Sequence from={1032} durationInFrames={287} name="WhatNext">
         <WhatNextScene />
       </Sequence>
 
-      {/* Scene 6: Outro (1188 - 1300 frames = 39.6s - 43.3s) */}
-      <Sequence from={1188} durationInFrames={112} name="Outro">
+      {/* Scene 6: Outro (1319 - 1410 frames = 44.0s - 47.0s) */}
+      <Sequence from={1319} durationInFrames={91} name="Outro">
         <OutroScene />
       </Sequence>
 
       {/* Dynamic Subtitle Karaoke Overlay */}
       <SubtitleBar />
 
-      {/* Synchronized Voiceover Audio */}
+      {/* Synchronized Voiceover Audio (Andrew: Warm, Natural, Conversational) */}
       <Audio src={staticFile("valkarye-voice.mp3")} volume={1.0} premountFor={fps} />
 
-      {/* Background Music */}
-      <Audio src={staticFile("bg-music.mp3")} volume={0.16} premountFor={fps} />
+      {/* Background Music (Chill Lo-Fi Hip Hop - Subtle ambient volume) */}
+      <Audio src={staticFile("bg-music.mp3")} volume={0.08} premountFor={fps} />
     </div>
   );
 };
