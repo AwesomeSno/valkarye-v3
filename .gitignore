@@ -7,18 +7,63 @@ Videos/
 *.mov
 *.mp3
 *.wav
+*.m4a
+*.avi
 
 # Local journal drafts and assets
 journal/
 
-# Remotion local caches & media
+# Remotion local caches, builds & media
 .remotion/
 .cache/
+out/
+dist/
+build/
 node_modules
+node_modules/
 valkarye-reel/node_modules
+valkarye-reel/node_modules/
 valkarye-reel/.remotion/
-valkarye-reel/public/images/
-valkarye-reel/public/*.mp3
+valkarye-reel/public
+valkarye-reel/public/
+valkarye-reel/out/
+valkarye-reel/build/
 
-# macOS
+# Python caches & bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Arduino & PlatformIO build artifacts
+.pio/
+.pioenvs/
+.piolibdeps/
+
+# Logs & Environment
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.env
+.env.*
+!.env.example
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+
+# Operating System files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
