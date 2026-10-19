@@ -2,6 +2,7 @@ import { Composition } from "remotion";
 import { ValkaryeReel } from "./ValkaryeReel";
 import { Valkarye15HourReel } from "./Valkarye15HourReel";
 import { Valkarye15HourDeepDive } from "./Valkarye15HourDeepDive";
+import { ValkaryeFinishingReel } from "./ValkaryeFinishingReel";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -30,6 +31,15 @@ export const RemotionRoot: React.FC = () => {
         width={1080}
         height={1920}
       />
+      <Composition
+        id="ValkaryeFinishingReel"
+        component={ValkaryeFinishingReel}
+        durationInFrames={1650}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
     </>
   );
 };
+

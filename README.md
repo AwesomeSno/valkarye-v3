@@ -2,7 +2,7 @@
 
 A high-performance, open-source 6-axis desktop robotic arm built with 3D-printed PETG parts, high-torque metal gear servos, an ESP32 microcontroller, and a real-time WebSockets control interface with voice commands.
 
-![Valkarye V3 6-Axis Robotic Arm](assets/valkarye_hero_render.jpg)
+![Valkarye V3 6-Axis Robotic Arm](assets/valkarye_cover_image.jpg)
 
 ---
 
