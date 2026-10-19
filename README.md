@@ -76,6 +76,10 @@ The control architecture is split into three clean layers:
 
 All 3D mechanical parts are designed for printing in PETG with 4 perimeters and 40% gyroid infill for maximum stiffness and heat resistance.
 
+### 3D CAD Preview & Assembly
+
+![Valkarye V3 3D CAD Preview](assets/cad_model_preview.png)
+
 ### Parametric CAD Source Files (`cad/`)
 - [`cad/valkarye_v3_assembly.step`](cad/valkarye_v3_assembly.step): Universal ISO 10303-21 STEP 3D assembly model (compatible with Fusion 360, SolidWorks, FreeCAD, Onshape).
 - [`cad/valkarye_v3_assembly.scad`](cad/valkarye_v3_assembly.scad): Full parametric OpenSCAD source file with kinematics hierarchy and dimensional variables.
@@ -84,6 +88,7 @@ All 3D mechanical parts are designed for printing in PETG with 4 perimeters and 
 - [`cad/03_parallel_gripper.scad`](cad/03_parallel_gripper.scad): Parametric synchronized dual gear-rack gripper frame.
 
 ### 3D Printable STL Models (`stl/`)
+- [`stl/valkarye_v3_full_assembly.stl`](stl/valkarye_v3_full_assembly.stl): Complete assembled 6-axis robotic arm model (QuickLook & 3D viewer ready).
 - [`stl/01_base_housing.stl`](stl/01_base_housing.stl): Stationary lower base housing with cable bore and desk mounts.
 - [`stl/02_turntable_plate.stl`](stl/02_turntable_plate.stl): Rotating turntable plate with bearing alignment boss.
 - [`stl/03_shoulder_bracket.stl`](stl/03_shoulder_bracket.stl): Shoulder clevis bracket with servo horn clamp pockets.

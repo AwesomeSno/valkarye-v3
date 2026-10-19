@@ -1,26 +1,52 @@
+// ==============================================================================
 // Valkarye V3 - Part 03: Parallel Jaw Gripper Mechanism
 // OpenSCAD Parametric Part
+// ==============================================================================
 
 $fn = 64;
 
-module gripper_assembly(aperture = 30) {
-    // Base Frame
+module parallel_gripper(aperture = 28.0) {
+    // Aerodynamic gripper chassis shell holding MG90S micro servo
     difference() {
-        cube([55, 35, 14], center = true);
-        cube([23.0, 12.4, 20], center = true); // MG90S pocket
-        translate([0, -8, 0]) cube([60, 6, 8], center = true);
-        translate([0, 8, 0]) cube([60, 6, 8], center = true);
+        union() {
+            cube([52.0, 34.0, 16.0], center = true);
+            translate([0, 0, 10.0])
+                cylinder(r1 = 17.0, r2 = 14.0, h = 6.0);
+        }
+        // Internal MG90S servo pocket (23 x 12.5 x 20 mm)
+        cube([23.0, 12.5, 20.0], center = true);
+        // Dual linear gear rack guide tracks
+        translate([0, -8.0, 0])
+            cube([60.0, 6.0, 8.0], center = true);
+        translate([0, 8.0, 0])
+            cube([60.0, 6.0, 8.0], center = true);
     }
-    // Left Jaw
-    translate([-aperture/2 - 6, 25, -6]) {
-        cube([8, 30, 12]);
-        translate([8, 10, 1]) cube([3, 18, 10]); // Silicone pad
+
+    // Left Linear Jaw Linkage with Silicone Grip Pad
+    translate([-aperture/2, 0, 14.0]) {
+        translate([-4.0, 0, 0])
+            cube([8.0, 24.0, 12.0], center = true);
+        translate([-3.5, 0, 16.0])
+            cube([7.0, 10.0, 32.0], center = true);
+        translate([-3.5, 0, 34.0])
+            cube([7.0, 8.0, 14.0], center = true);
+        // Silicone friction pad
+        translate([0.5, 0, 34.0])
+            cube([2.0, 7.0, 12.0], center = true);
     }
-    // Right Jaw
-    translate([aperture/2 - 2, 25, -6]) {
-        cube([8, 30, 12]);
-        translate([-3, 10, 1]) cube([3, 18, 10]); // Silicone pad
+    
+    // Right Linear Jaw Linkage with Silicone Grip Pad
+    translate([aperture/2, 0, 14.0]) {
+        translate([4.0, 0, 0])
+            cube([8.0, 24.0, 12.0], center = true);
+        translate([3.5, 0, 16.0])
+            cube([7.0, 10.0, 32.0], center = true);
+        translate([3.5, 0, 34.0])
+            cube([7.0, 8.0, 14.0], center = true);
+        // Silicone friction pad
+        translate([-0.5, 0, 34.0])
+            cube([2.0, 7.0, 12.0], center = true);
     }
 }
 
-gripper_assembly();
+parallel_gripper(30.0);
