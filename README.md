@@ -151,9 +151,7 @@ The ESP32 broadcasts a telemetry packet back to connected clients every 50ms:
 
 ---
 
-## Bill of Materials
-
-The complete procurement parts list and funding breakdown are available in [`BOM.md`](BOM.md) and [`BOM.csv`](BOM.csv).
+## Hardware Components
 
 | Component | Quantity | Specification / Description |
 |---|---|---|
