@@ -81,11 +81,15 @@ All 3D mechanical parts are designed for printing in PETG with 4 perimeters and 
 ![Valkarye V3 3D CAD Preview](assets/cad_model_preview.png)
 
 ### Parametric CAD Source Files (`cad/`)
+- [`cad/valkarye_v3_assembly.f3d`](cad/valkarye_v3_assembly.f3d): **Editable Autodesk Fusion 360 native archive** containing the full parametric assembly, components, kinematic joint tree, and material properties.
 - [`cad/valkarye_v3_assembly.step`](cad/valkarye_v3_assembly.step): Universal ISO 10303-21 STEP 3D assembly model (compatible with Fusion 360, SolidWorks, FreeCAD, Onshape).
 - [`cad/valkarye_v3_assembly.scad`](cad/valkarye_v3_assembly.scad): Full parametric OpenSCAD source file with kinematics hierarchy and dimensional variables.
 - [`cad/01_base_turntable.scad`](cad/01_base_turntable.scad): Parametric base housing with 51105 thrust bearing recess and M4 clamp bores.
 - [`cad/02_bicep_truss.scad`](cad/02_bicep_truss.scad): 140mm center-to-center I-beam truss with dual 608ZZ bearing seats.
 - [`cad/03_parallel_gripper.scad`](cad/03_parallel_gripper.scad): Parametric synchronized dual gear-rack gripper frame.
+
+> [!TIP]
+> **CAD Editable Source**: The native editable assembly is provided directly in [`cad/valkarye_v3_assembly.f3d`](cad/valkarye_v3_assembly.f3d) for Autodesk Fusion 360, along with the full parametric code source in [`cad/valkarye_v3_assembly.scad`](cad/valkarye_v3_assembly.scad) (OpenSCAD / FreeCAD) and the neutral [`cad/valkarye_v3_assembly.step`](cad/valkarye_v3_assembly.step) export.
 
 ### 3D Printable STL Models (`stl/`)
 - [`stl/valkarye_v3_full_assembly.stl`](stl/valkarye_v3_full_assembly.stl): Complete assembled 6-axis robotic arm model (QuickLook & 3D viewer ready).
